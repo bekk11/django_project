@@ -1,0 +1,18 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+    Admin page
+{% endblock %}
+
+{% block content %}
+    <h1>Create Tasks</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.title }}
+        <br>
+        {{ form.task }}
+        <br>
+        <button type="submit" class="btn btn-success">Add to list</button>
+        <span>{{ error }}</span>
+    </form>
+{% endblock %}
